@@ -1,0 +1,21 @@
+{
+  "name": "noisegone",
+  "version": "1.0.0",
+  "description": "NoiseGone — онлайн-очистка аудио. Простой, быстрый, приватный.",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "vercel dev",
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "busboy": "1.6.0",
+    "ffmpeg-static": "5.2.0",
+    "fluent-ffmpeg": "2.1.2",
+    "tmp": "0.2.3",
+    "uuid": "9.0.1"
+  }
+}
