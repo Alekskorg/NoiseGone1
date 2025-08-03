@@ -1,0 +1,21 @@
+/* /styles/tokens.css — дизайн-токены */
+:root {
+  --bg: #f5f7ff;
+  --card: #ffffff;
+  --text: #14161a;
+  --muted: #6b7280;
+
+  --primary: #2563eb;
+  --primary-600: #1e4fd4;
+  --primary-100: #e9f0ff;
+
+  --accent: #22c55e;
+  --accent-600: #16a34a;
+  --danger: #ef4444;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --border: 1px solid rgba(20,22,26,.08);
+
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", "Apple Color Emoji", "Segoe UI Emoji";
+}
