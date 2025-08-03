@@ -1,4 +1,4 @@
-// /app.js (ES module)
+
 import { DICTS, getLang, setLang, t } from "./lib/i18n.js";
 
 const qs = (s) => document.querySelector(s);
