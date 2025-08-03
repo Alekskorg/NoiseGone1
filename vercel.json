@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "functions": {
-    "api/clean.js": {
-      "runtime": "nodejs20.x",
-      "maxDuration": 60
-    },
-    "api/status.js": {
-      "runtime": "nodejs20.x",
-      "maxDuration": 10
-    }
-  }
+  "builds": [
+    { "src": "api/clean.js",  "use": "@vercel/node@2.15.10" },
+    { "src": "api/status.js", "use": "@vercel/node@2.15.10" },
+    { "src": "index.html",    "use": "@vercel/static@1.0.0" },
+    { "src": "styles/*.css",  "use": "@vercel/static@1.0.0" },
+    { "src": "public/**",     "use": "@vercel/static@1.0.0" }
+  ],
+  "routes": [
+    { "src": "^/api/(.*)$", "dest": "/api/$1" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
 
