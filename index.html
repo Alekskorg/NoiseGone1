@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>NoiseGone</title>
+  <link rel="preload" href="/styles/tokens.css" as="style">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="icon" href="/public/logo.svg">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header__left">
+      <img src="/public/logo.svg" class="logo" alt="NoiseGone logo" />
+      <div class="brand">NoiseGone</div>
+    </div>
+    <div class="lang">
+      <label for="langSelect" id="langLabel">Language</label>
+      <select id="langSelect" aria-labelledby="langLabel">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="de">DE</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="card" aria-labelledby="title">
+      <h1 id="title">Upload an audio file and we'll remove the noise</h1>
+      <p class="hero-sub" id="heroSub">WAV, MP3, M4A (up to ~50 MB)</p>
+
+      <div class="pills" role="group" aria-label="Presets">
+        <button class="pill active" data-preset="podcast" id="pPodcast">Podcast</button>
+        <button class="pill" data-preset="interview" id="pInterview">Interview</button>
+        <button class="pill" data-preset="voiceover" id="pVoiceover">Voice-over</button>
+        <button class="pill" data-preset="field" id="pField">Field</button>
+      </div>
+
+      <div id="drop" class="drop" role="button" tabindex="0" aria-label="file drop zone">
+        <div class="title" id="dropTitle">Drag & drop audio here or click to choose</div>
+        <div class="subtitle" id="dropSub">WAV, MP3, M4A (up to ~50 MB)</div>
+      </div>
+      <input id="file" type="file" accept="audio/*" hidden>
+
+      <div class="buttons">
+        <button id="cleanBtn" class="btn btn-primary" disabled>Clean noise</button>
+        <button id="newBtn" class="btn btn-ghost" disabled>New file</button>
+        <button id="resetBtn" class="btn btn-ghost">Reset</button>
+        <button id="recBtn" class="btn btn-ghost" disabled>Record (soon)</button>
+      </div>
+
+      <div class="progress" aria-hidden="true">
+        <div class="progress__bar" id="bar"></div>
+      </div>
+      <div class="status" id="status"></div>
+
+      <div class="result" id="result">
+        <div class="ab" id="abLabel">A/B: Before / After</div>
+        <audio id="player" controls></audio>
+      </div>
+    </section>
+
+    <p class="footer" id="footerNote">
+      Free — up to 5 minutes/day. Large volume billed per minute.
+    </p>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
