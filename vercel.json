@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "functions": {
     "api/clean.js": {
       "runtime": "nodejs20.x",
@@ -10,3 +11,4 @@
     }
   }
 }
+
